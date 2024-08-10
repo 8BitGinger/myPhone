@@ -1,0 +1,80 @@
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+}
+
+.image-gallery {
+  color: white;
+  display: flex;
+  margin: auto;
+}
+
+.camera {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+
+.camera-container img {
+  width: 200px;
+  height: 350px;
+  box-shadow: 0 0 10px 0 rgba(68, 67, 67, 0.5);
+  border: 1px solid white;
+  border-radius: 12px;
+}
+
+.gallery-controls {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.left-gallery {
+  left: 0;
+}
+
+.right-gallery {
+  right: 0;
+}
+
+.gallery-controls button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin: auto;
+}
+
+.gallery-controls button:hover {
+  color: #9bd2ea;
+  outline: none;
+}
+
+.gallery-controls button:active {
+  color: #6676b1;
+  outline: none;
+  scale: 0.9;
+}
+
+.gallery-controls button:focus {
+  outline: none;
+}

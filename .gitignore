@@ -1,0 +1,7 @@
+dotenv
+.dotenv
+.env
+
+node_modules
+/dist
+/build

@@ -1,0 +1,60 @@
+.music-page {
+  width: 94%;
+  height: 100%;
+  background: linear-gradient(170deg, #464546d7, #262626, #464546e8);
+  padding: 10px;
+  display: flex;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin: auto;
+}
+
+.controls button:hover {
+  color: #ea9b9b;
+}
+
+.controls button:active {
+  color: #b16666;
+  outline: none;
+  scale: 0.9;
+}
+
+.controls button:focus {
+  outline: none;
+}

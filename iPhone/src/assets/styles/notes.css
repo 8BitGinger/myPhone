@@ -1,0 +1,160 @@
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    170deg,
+    #464546dd,
+    #262626e9,
+    #464546,
+    #262626,
+    #747374,
+    #262626eb,
+    #464546de
+  );
+  min-height: 100%;
+  min-width: 100%;
+
+  border-radius: 12px;
+  margin: auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.notes-container h1 {
+  color: white;
+  font-size: 30px;
+  margin: auto;
+}
+
+.notes-input {
+  width: 80%;
+  padding: 5px;
+  height: 100px;
+  margin: 15px auto;
+  border-radius: 8px;
+  font-size: 1.2em;
+  background-color: rgba(255, 252, 252, 0);
+}
+
+.notes-input textarea {
+  width: 90%;
+  background-color: rgba(128, 128, 128, 0.291);
+  border: 1px solid #e4ee25;
+  margin: auto;
+  padding: 5px;
+  height: 30px;
+  color: white;
+  resize: none;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+.notes-input button {
+  margin: auto;
+  padding: 0;
+  margin-left: 5px;
+  background: none;
+  font-size: 15px;
+  font-size: 25px;
+  color: yellow;
+  cursor: pointer;
+}
+
+.note-input2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.notes-input button:hover {
+  color: white;
+  border: none;
+}
+
+.notes-input button:active {
+  scale: 0.9;
+  outline: none;
+  border: none;
+}
+
+.notes-input button:focus {
+  outline: none;
+  border: none;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: auto;
+  width: 78%;
+  height: 100%;
+
+  overflow: scroll;
+}
+
+.notes button {
+  padding: 2px 6px;
+  margin: 0 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 10px;
+  background-color: #ee2525;
+  color: black;
+  cursor: pointer;
+}
+
+.notes button:hover {
+  background-color: #eeee25;
+  color: black;
+}
+
+.notes button:active {
+  scale: 0.9;
+  outline: none;
+}
+
+.notes-button:focus {
+  outline: none;
+}
+
+.note {
+  margin: 5px auto;
+
+  font-size: 15px;
+  display: flex;
+  font-size: 18px;
+  color: yellow;
+  border: 1px solid yellow;
+  background-color: rgb(26, 26, 23);
+
+  justify-content: center;
+  align-items: center;
+  padding: 3px 5px;
+
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .notes button {
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .fc-today-button {
+    display: none !important;
+  }
+}

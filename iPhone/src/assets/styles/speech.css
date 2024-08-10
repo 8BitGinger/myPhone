@@ -1,0 +1,53 @@
+.speech-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  margin: auto;
+  width: 78%;
+  height: 100%;
+  background: linear-gradient(170deg, #464546, #262626, #69777a);
+  border-radius: 16px;
+}
+
+.top-section {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.top-section h2 {
+  margin: auto;
+  font-size: 2em;
+}
+
+.top-section img {
+  height: 130px;
+  width: 130px;
+}
+
+.speech-box input {
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  border: 2px solid #25c6ee;
+  border-radius: 1em;
+  font-size: 1.2em;
+  background-color: rgba(141, 138, 138, 0.594);
+}
+
+.speech-box button {
+  padding: 5px 10px;
+  margin: auto;
+  margin-top: 0;
+  border: 2px solid #25c6ee;
+  border-radius: 8px;
+  font-size: 1.2em;
+  background-color: #25c6ee;
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+}
