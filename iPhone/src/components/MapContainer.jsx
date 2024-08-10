@@ -1,10 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
-import dotenv from 'dotenv';
 
 const libraries = ['places']; // Load the libraries for the Places service
-
-dotenv.config();
 
 const MapContainer = () => {
   const [center, setCenter] = useState({ lat: 37.7749, lng: -122.4194 });
