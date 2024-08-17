@@ -26,8 +26,8 @@
 }
 
 .camera-container img {
-  width: 200px;
-  height: 350px;
+  width: 250px;
+  height: 400px;
   box-shadow: 0 0 10px 0 rgba(68, 67, 67, 0.5);
   border: 1px solid white;
   border-radius: 12px;
@@ -39,10 +39,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
-  bottom: 0;
+  width: 90%;
+  top: 0;
   margin: auto;
-  margin-bottom: 20px;
+
   z-index: 2;
 }
 

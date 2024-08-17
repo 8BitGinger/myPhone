@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
-import couple from '../assets/images/photos/couple.jpg';
-import gym from '../assets/images/photos/gym.jpg';
-import pier from '../assets/images/photos/pier.jpg';
-import pillowFight from '../assets/images/photos/pillowFight.jpg';
+import pic1 from '../assets/images/photos/pic1.png';
+import pic2 from '../assets/images/photos/pic2.png';
+import pic3 from '../assets/images/photos/pic3.png';
+import pic4 from '../assets/images/photos/pic4.png';
 
 function ScrollableImageGallery() {
-  const photos = [couple, gym, pier, pillowFight];
+  const photos = [pic1, pic2, pic3, pic4];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {

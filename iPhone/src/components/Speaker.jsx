@@ -9,7 +9,6 @@ const Speaker = () => {
       <div className="phone-tray">
         <div className="speaker"></div>
         <div className="circles"></div>
-        <div className="circles"></div>
       </div>
       <IconBox />
     </div>

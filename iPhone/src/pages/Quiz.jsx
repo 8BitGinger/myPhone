@@ -48,12 +48,11 @@ const Quiz = () => {
         </div>
       ) : (
         <div className="quiz-box">
-          <h3>{!incorrect ? 'Correct' : 'Incorrect'}</h3>
+          <h3>{!incorrect ? 'Correct' : 'Wrong'}</h3>
           <img src={logo} alt="" />
-          <button onClick={restart}>Restart</button>
+          <button onClick={restart}>Try Again</button>
         </div>
       )}
-      );
     </div>
   );
 };

@@ -25,11 +25,7 @@ export const AppBox = () => {
         appTitle="Calculator"
         appPath="/calculator"
       />
-      <AppSection
-        photo={music}
-        appTitle="Music Player"
-        appPath="/musicplayer"
-      />
+      <AppSection photo={music} appTitle="Music" appPath="/musicplayer" />
       <AppSection photo={photos} appTitle="Photos" appPath="/camera" />
       <AppSection photo={clock} appTitle="Clock" appPath="/clock" />
       <AppSection photo={maps} appTitle="Maps" appPath="/maps" />
@@ -41,7 +37,7 @@ export const AppBox = () => {
         appPath="/text2speech"
       />
       <AppSection photo={weather} appTitle="Weather" appPath="/weather" />
-      <AppSection photo={game} appTitle="Tic Tac Toe" appPath="/game" />
+      <AppSection photo={game} appTitle="TicTacToe" appPath="/game" />
       <AppSection photo={quiz} appTitle="Quizzed" appPath="/quiz" />
       <AppSection photo={dev} appTitle="Dev Info" appPath="/dev" />
     </div>
