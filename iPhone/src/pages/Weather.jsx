@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './../assets/styles/weather.css';
+import { motion } from 'framer-motion';
+import { fadeIn } from './../util/variants';
 
 import weatherIcon from './../assets/images/weather/sunny.png';
 
@@ -8,7 +10,13 @@ const Weather = () => {
   const cityName = 'Lubbock';
   const currentTemp = '99';
   return (
-    <div className="weather-page">
+    <motion.div
+      className="weather-page"
+      variants={fadeIn('up', 0.1)}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.3 }}
+    >
       <div className="weather-info2">
         <h2>{cityName}</h2>
         <div className="temp">
@@ -41,7 +49,7 @@ const Weather = () => {
           <p>99°f</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

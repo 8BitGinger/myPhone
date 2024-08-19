@@ -37,6 +37,17 @@
     #2c2c2c,
     #464546
   );
+
+  --container-gradient2: linear-gradient(
+    45deg,
+    #bab7ba,
+    #9b9898,
+    #839595,
+    #8cb2af,
+    #dad3da,
+    #b2acac,
+    #c2bdc2
+  );
   --container-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 }
 

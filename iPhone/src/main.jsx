@@ -16,7 +16,7 @@ import MusicPlayer from './pages/MusicPlayer.jsx';
 import Text2Speech from './pages/Text2Speech.jsx';
 import Dev from './pages/Dev.jsx';
 import Quiz from './pages/Quiz.jsx';
-import Game from './pages/Game.jsx';
+import Game from './pages/Game.tsx';
 
 const router = createBrowserRouter([
   {

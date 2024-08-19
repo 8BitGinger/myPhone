@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../util/variants';
 
 import rock from '../assets/audio/alternative.mp3';
 import hiphop from '../assets/audio/hiphop.mp3';
@@ -65,7 +67,13 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="music-page">
+    <motion.div
+      className="music-page"
+      variants={fadeIn('down', 0.1)}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.1 }}
+    >
       <div className="player">
         <audio src={currentSong} autoPlay></audio>
         <img src={currentArtwork} alt="" />
@@ -82,7 +90,7 @@ const MusicPlayer = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

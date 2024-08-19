@@ -3,6 +3,8 @@ import quizLogo from '../assets/images/quizLOGO.png';
 import '../assets/styles/quiz.css';
 import correctLogo from '../assets/images/correct.png';
 import incorrectLogo from '../assets/images/incorrect.png';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../util/variants';
 
 const Quiz = () => {
   const [incorrect, setIncorrect] = React.useState(true);
@@ -31,7 +33,13 @@ const Quiz = () => {
   };
 
   return (
-    <div className="quiz-container">
+    <motion.div
+      className="quiz-container"
+      variants={fadeIn('up', 0.3)}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.5 }}
+    >
       <img src={quizLogo} alt="Quizzed Logo" />
       {!answered ? (
         <div className="quiz-box">
@@ -53,7 +61,7 @@ const Quiz = () => {
           <button onClick={restart}>Try Again</button>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

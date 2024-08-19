@@ -1,10 +1,18 @@
 import speechBubble from '../assets/images/speech-bubble.png';
 import '../assets/styles/speech.css';
+import { fadeIn } from '../util/variants';
+import { motion } from 'framer-motion';
 
 function Text2Speech() {
   return (
     <>
-      <div className="speech-box">
+      <motion.div
+        className="speech-box"
+        variants={fadeIn('right', 0.1)}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="top-section">
           <img src={speechBubble} alt="speech-bubble" />
           <h2>Text 2 Speech</h2>
@@ -19,7 +27,7 @@ function Text2Speech() {
         >
           Speak
         </button>
-      </div>
+      </motion.div>
     </>
   );
 }

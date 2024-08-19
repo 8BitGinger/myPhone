@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { FaClock } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../util/variants';
 
 const Clock = () => {
   let time = new Date().toLocaleTimeString();
@@ -12,7 +14,13 @@ const Clock = () => {
   setInterval(UpdateTime);
   return (
     <>
-      <div className="overlay-clock">
+      <motion.div
+        className="overlay-clock"
+        variants={fadeIn('left', 0.1)}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="float-clock">
           <div className="clock-container">
             <div className="overlay">
@@ -23,7 +31,7 @@ const Clock = () => {
 
           <div className="clock-block"></div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

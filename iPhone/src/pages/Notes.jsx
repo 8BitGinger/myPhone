@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import NoteInput from '../components/NoteInput';
 import '../assets/styles/notes.css';
 import { FaXbox } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../util/variants';
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
@@ -27,7 +29,13 @@ const Notes = () => {
   };
 
   return (
-    <div className="notes-container">
+    <motion.div
+      className="notes-container"
+      variants={fadeIn('down', 0.2)}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.3 }}
+    >
       <h1>Notes</h1>
       <div className="notes-input">
         <NoteInput addNote={addNote} />
@@ -40,7 +48,7 @@ const Notes = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
