@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Square from '../components/Square';
 type Player = 'X' | 'O' | 'BOTH' | null;
-import '../assets/styles/Game.css';
+import '../assets/styles/game.css';
 
 function calculateWinner(squares: Player[]) {
   const lines = [
