@@ -62,9 +62,7 @@ function Game() {
     <div className="container">
       {!winner && <p>Hey {currentPlayer}, it's your turn</p>}
       {winner && winner !== 'BOTH' && <p>Congratulations {winner}</p>}
-      {winner && winner === 'BOTH' && (
-        <p>Congratulations you're both winners</p>
-      )}
+      {winner && winner === 'BOTH' && <p>Cat Got this one!</p>}
 
       <div className="grid">
         {Array(9)

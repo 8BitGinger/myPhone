@@ -48,20 +48,25 @@ h1 {
 }
 
 .container p {
-  color: red;
+  color: rgb(35, 35, 35);
+  font-weight: 900;
   font-size: 25px;
 }
 
 .square {
   width: 60px;
   height: 60px;
-  font-size: 20px;
+  font-size: 30px;
   background-color: #e8e5e5;
   border: solid 3px #000;
   font-family: 'Rock Salt', cursive;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 
 .square {
@@ -69,31 +74,31 @@ h1 {
 }
 
 .square_o {
-  background-color: rgb(87, 218, 21);
+  color: rgb(21, 50, 218);
 }
 
 .square_x {
-  background-color: crimson;
+  color: rgb(200, 11, 11);
 }
 
 .reset {
-  background-color: #f5f5f5;
+  background-color: #94ef9d;
   border: solid 3px #000;
-  font-size: 20px;
+  font-size: 18px;
 
-  font-weight: 400;
-  font-style: normal;
-  font-weight: bolder;
-  width: 100px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
   margin: auto;
   margin-top: 20px;
-  color: #000;
+  color: #222222;
   margin-bottom: 50px;
 
-  font-family: 'Madimi One', sans-serif;
-  font-weight: 400;
+  font-family: 'Rock Salt', cursive;
+  font-weight: 600;
   font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reset:hover {

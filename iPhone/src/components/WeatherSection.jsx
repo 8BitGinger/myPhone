@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './../assets/styles/weather.css';
-
-import weatherIcon from './../assets/images/weather/sunny.png';
+import getWeather from '../helpers/getWeather';
 
 const Weather = () => {
-  const cityName = 'Lubbock';
-  const currentTemp = '99';
+  const [wLocation, setWLocation] = useState('Lubbock');
+
+  const [weather, setWeather] = React.useState(null);
+  React.useEffect(() => {
+    getWeather(wLocation).then((res) => {
+      res.json().then((data) => {
+        setWeather(data);
+        console.log(data);
+      });
+    });
+  }, [wLocation]);
+
+  const cityName = wLocation;
+  const currentTemp = weather ? Math.round(weather.main.temp) : '';
+  const weatherPic = weather
+    ? 'https://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'
+    : '';
+  const weatherDesc = weather ? weather.weather[0].description : '';
+
   return (
     <Link className="weather-container" to="/weather">
       <div className="weather">
@@ -27,7 +43,7 @@ const Weather = () => {
           </div>
         </div>
         <div className="weather-icon">
-          <img src={weatherIcon} alt="weather-icon" />
+          <img src={weather ? weatherPic : ''} alt="weather-icon" />
         </div>
       </div>
     </Link>

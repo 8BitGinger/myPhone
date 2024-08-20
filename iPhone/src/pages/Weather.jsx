@@ -3,12 +3,41 @@ import { Link } from 'react-router-dom';
 import './../assets/styles/weather.css';
 import { motion } from 'framer-motion';
 import { fadeIn } from './../util/variants';
-
-import weatherIcon from './../assets/images/weather/sunny.png';
+import getWeather from '../helpers/getWeather';
+import { CiSearch } from 'react-icons/ci';
 
 const Weather = () => {
-  const cityName = 'Lubbock';
-  const currentTemp = '99';
+  const [weather, setWeather] = React.useState(null);
+  const [inputValue, setInputValue] = React.useState('Lubbock');
+  const [updatedValue, setUpdatedValue] = React.useState('');
+
+  const wLocation = updatedValue || 'Lubbock';
+
+  React.useEffect(() => {
+    getWeather(wLocation).then((res) => {
+      res.json().then((data) => {
+        setWeather(data);
+        console.log(data);
+      });
+    });
+  }, [wLocation]);
+
+  const cityName = wLocation;
+  const currentTemp = weather ? Math.round(weather.main.temp) : '';
+  const weatherPic = weather
+    ? 'https://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'
+    : '';
+  const weatherDesc = weather ? weather.weather[0].description : '';
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleUpdate = () => {
+    event.preventDefault();
+    setUpdatedValue(inputValue);
+  };
+
   return (
     <motion.div
       className="weather-page"
@@ -18,16 +47,22 @@ const Weather = () => {
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="weather-info2">
-        <h2>{cityName}</h2>
-        <div className="temp">
-          <p>{currentTemp}</p>
-          <span>°f</span>
-        </div>
+        <form>
+          <input type="text" placeholder={cityName} onChange={handleChange} />
+          <button className="btn btn-wsearch" onClick={handleUpdate}>
+            <CiSearch />
+          </button>
+        </form>
+      </div>
+      <div className="temp2">
+        <p>{currentTemp}</p>
+        <span>°f</span>
       </div>
       <div className="weather-info3">
-        <img src={weatherIcon} alt="weather icon" />
+        <img src={weatherPic} alt="weather icon" />
       </div>
-      <div className="forecast">
+      <p>{weatherDesc}</p>
+      {/* <div className="forecast">
         <div className="forecast-day">
           <h3>Monday</h3>
           <p>99°f</p>
@@ -48,7 +83,7 @@ const Weather = () => {
           <h3>Friday</h3>
           <p>99°f</p>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
